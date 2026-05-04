@@ -11,12 +11,21 @@
       background: #f7f7f7;
       color: #222;
     }
+
+    /* HEADER */
     header {
       background: #0a0a0a;
       color: white;
-      padding: 20px;
+      padding: 20px 20px 10px 20px;
       text-align: center;
     }
+    header img {
+      width: 120px; /* SMALL HEADER LOGO */
+      height: auto;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+
     nav {
       background: #111;
       padding: 10px 0;
@@ -28,16 +37,25 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* HERO */
     .hero {
       background: #1a1a1a;
       color: white;
-      padding: 60px 20px;
+      padding: 50px 20px;
       text-align: center;
+    }
+    .hero img {
+      width: 220px; /* MEDIUM HERO LOGO */
+      height: auto;
+      margin-bottom: 20px;
     }
     .hero h1 {
       margin: 0;
-      font-size: 36px;
+      font-size: 34px;
     }
+
+    /* SECTIONS */
     .section {
       padding: 40px 20px;
       max-width: 900px;
@@ -50,6 +68,8 @@
       margin-top: 0;
       color: #0a0a0a;
     }
+
+    /* PRODUCT GRID */
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -61,6 +81,8 @@
       border-radius: 8px;
       border: 1px solid #ddd;
     }
+
+    /* FOOTER */
     footer {
       background: #0a0a0a;
       color: white;
@@ -74,6 +96,8 @@
 <body>
 
 <header>
+  <!-- SMALL HEADER LOGO -->
+  <img src="logo.png" alt="HDH Trading Logo">
   <h1>HDH Trading</h1>
   <p>Automotive & Hydraulic Hose Supply – UK to Pakistan Export</p>
 </header>
@@ -85,6 +109,8 @@
 </nav>
 
 <div class="hero">
+  <!-- MEDIUM HERO LOGO -->
+  <img src="logo.png" alt="HDH Trading Logo">
   <h1>Reliable Supply. Premium Quality. Global Reach.</h1>
   <p>Specialising in NOS automotive and hydraulic hoses for wholesale distribution.</p>
 </div>
