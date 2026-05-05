@@ -297,7 +297,19 @@
       padding: 40px 20px;
       font-size: 13px;
       color: var(--text-muted);
-    }
+    /* FORCE OVERRIDES — HERO LOGO + SPACING */
+.hero {
+  padding-top: 50px !important;   /* reduces black space above */
+  padding-bottom: 120px;          /* keeps bottom spacing clean */
+}
+
+.hero-logo {
+  height: 120px !important;       /* 50% bigger */
+  width: auto !important;
+  margin: 0 auto 25px !important; /* spacing below logo */
+  display: block;
+  opacity: 0.95;
+}
   </style>
 </head>
 
@@ -325,6 +337,23 @@
 
     <!-- HERO -->
     <main>
+      <section class="hero">
+  <div class="hero-content">
+
+    <!-- NEW: Main Logo in Hero -->
+    <img src="logo.png" alt="HDH Trading Logo" class="hero-logo">
+
+    <h1>Built for Industry. Delivered Worldwide.</h1>
+    <p>HDH Trading supplies NOS automotive & hydraulic hoses with precision, reliability, and UK‑verified quality — shipped globally in bulk.</p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn primary">Request a Quote</a>
+      <a href="#supplier" class="btn secondary">Become a Supplier</a>
+    </div>
+
+  </div>
+</section>
+
       <section class="hero">
         <div class="container">
           <div class="hero-inner">
