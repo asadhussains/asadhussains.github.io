@@ -184,12 +184,14 @@
       background: rgba(0, 0, 0, 0.35);
     }
 
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
+.hero-cta {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: 14px;              /* space between buttons */
+  margin-bottom: 10px;
+}
+
     }
 .btn-primary {
   background: var(--accent);
