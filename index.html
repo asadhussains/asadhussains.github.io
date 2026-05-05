@@ -21,11 +21,7 @@
       --max-width-large: 1400px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -35,21 +31,10 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
 
     .container {
       width: 100%;
@@ -59,14 +44,10 @@
     }
 
     @media (min-width: 1440px) {
-      .container {
-        max-width: var(--max-width-large);
-      }
+      .container { max-width: var(--max-width-large); }
     }
 
-    header {
-      padding: 20px 0 10px;
-    }
+    header { padding: 20px 0 10px; }
 
     .nav {
       display: flex;
@@ -81,11 +62,7 @@
       gap: 10px;
     }
 
-    .logo-img {
-      height: 42px;
-      width: auto;
-      display: block;
-    }
+    .logo-img { height: 42px; width: auto; }
 
     .logo-text {
       font-weight: 700;
@@ -102,34 +79,27 @@
       color: var(--text-muted);
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+    .nav-links a:hover { color: var(--accent); }
 
-    /* Hero */
-    .hero {
-      padding: 40px 0 60px;
-    }
+    /* HERO */
+    .hero { padding: 40px 0 60px; }
 
     .hero-inner {
-      background: radial-gradient(circle at top left, rgba(77, 163, 217, 0.18), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(77, 163, 217, 0.12), transparent 55%);
+      background: radial-gradient(circle at top left, rgba(77,163,217,0.18), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(77,163,217,0.12), transparent 55%);
       border-radius: var(--border-radius-box);
       box-shadow: var(--shadow-soft);
       overflow: hidden;
-      position: relative;
     }
 
     .hero-media {
-      position: relative;
       min-height: 260px;
       background-image:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.78)),
+        linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.78)),
         url("hero-warehouse-hose-reels.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 60px 20px;
     }
@@ -138,6 +108,23 @@
       text-align: center;
       max-width: 720px;
       padding: 0 20px 40px;
+    }
+
+    /* NEW LOGO + BRAND IN HERO */
+    .hero-logo {
+      height: 70px;
+      width: auto;
+      margin: 0 auto 12px;
+      opacity: 0.95;
+    }
+
+    .hero-brand-large {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
 
     .hero-kicker {
@@ -153,12 +140,6 @@
       font-weight: 700;
       color: var(--accent);
       margin-bottom: 16px;
-    }
-
-    @media (min-width: 768px) {
-      .hero-title {
-        font-size: 38px;
-      }
     }
 
     .hero-subtitle {
@@ -180,8 +161,8 @@
     .hero-badge {
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.35);
     }
 
     .hero-cta {
@@ -209,18 +190,6 @@
     .btn-outline:hover {
       background: var(--accent);
       color: #05070a;
-      box-shadow: 0 0 0 1px rgba(77, 163, 217, 0.35);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #05070a;
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: transparent;
-      color: var(--accent);
     }
 
     .hero-note {
@@ -228,22 +197,14 @@
       color: var(--text-muted);
     }
 
-    /* Sections */
-    .section {
-      padding: 40px 0;
-    }
+    /* SECTIONS */
+    .section { padding: 40px 0; }
 
     .section-inner {
       background: var(--bg-box);
       border-radius: var(--border-radius-box);
       box-shadow: var(--shadow-soft);
       padding: 60px 40px;
-    }
-
-    @media (max-width: 600px) {
-      .section-inner {
-        padding: 40px 22px;
-      }
     }
 
     .section-title {
@@ -264,75 +225,49 @@
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3,1fr);
       gap: 24px;
     }
 
     @media (max-width: 900px) {
-      .grid-3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .grid-3 { grid-template-columns: repeat(2,1fr); }
     }
 
     @media (max-width: 640px) {
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
+      .grid-3 { grid-template-columns: 1fr; }
     }
 
     .card {
       background: #181818;
       border-radius: 10px;
       padding: 20px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255,255,255,0.04);
     }
 
-    .card-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
+    .card-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .card-text { font-size: 14px; color: var(--text-muted); }
 
-    .card-text {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
+    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
     .pill {
       font-size: 13px;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.08);
       color: var(--text-muted);
     }
 
-    /* Two-column section */
+    /* TWO COLUMN */
     .two-col {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 32px;
-      align-items: start;
     }
 
     @media (max-width: 900px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
+      .two-col { grid-template-columns: 1fr; }
     }
 
-    .list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
+    .list { list-style: none; padding: 0; }
     .list li {
       position: relative;
       padding-left: 18px;
@@ -349,24 +284,11 @@
       color: var(--accent);
     }
 
-    .muted-block {
-      font-size: 14px;
-      color: var(--text-muted);
-      margin-top: 10px;
-    }
+    .muted-block { font-size: 14px; color: var(--text-muted); margin-top: 10px; }
 
-    /* Contact */
-    .contact-block {
-      text-align: center;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .contact-line {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
+    /* CONTACT */
+    .contact-block { text-align: center; max-width: 520px; margin: 0 auto; }
+    .contact-line { font-size: 18px; margin-bottom: 8px; }
     .contact-label {
       color: var(--text-muted);
       font-size: 14px;
@@ -374,39 +296,24 @@
       letter-spacing: 0.16em;
       margin-bottom: 4px;
     }
+    .contact-value { font-size: 18px; font-weight: 500; }
+    .contact-location { margin-top: 16px; font-size: 16px; color: var(--text-muted); }
 
-    .contact-value {
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    .contact-location {
-      margin-top: 16px;
-      font-size: 16px;
-      color: var(--text-muted);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--bg-box);
-      margin-top: 40px;
-    }
-
+    /* FOOTER */
+    footer { background: var(--bg-box); margin-top: 40px; }
     .footer-inner {
       text-align: center;
       padding: 40px 20px;
       font-size: 13px;
       color: var(--text-muted);
     }
-
-    .footer-inner span {
-      display: block;
-      margin-bottom: 4px;
-    }
   </style>
 </head>
+
 <body>
   <div class="page-wrapper">
+
+    <!-- HEADER -->
     <header>
       <div class="container">
         <nav class="nav">
@@ -425,60 +332,59 @@
       </div>
     </header>
 
+    <!-- HERO -->
     <main>
-      <!-- Hero -->
       <section class="hero">
         <div class="container">
           <div class="hero-inner">
             <div class="hero-media">
               <div class="hero-content">
+
+                <!-- NEW LOGO + BRAND -->
+                <img src="logo.png" class="hero-logo" alt="HDH Trading Logo">
+                <div class="hero-brand-large">HDH TRADING</div>
+
                 <div class="hero-kicker">UK‑Based NOS Hose Supplier</div>
+
                 <h1 class="hero-title">Premium Supplier of All Types of NOS Hoses</h1>
+
                 <p class="hero-subtitle">
                   UK‑sourced, new‑old‑stock automotive and hydraulic hoses — carefully selected for export‑grade reliability and value.
                 </p>
 
                 <div class="hero-badge-row">
-                  <div class="hero-badge">Automotive &amp; Hydraulic Hoses</div>
-                  <div class="hero-badge">UK &amp; EU Sourcing</div>
+                  <div class="hero-badge">Automotive & Hydraulic Hoses</div>
+                  <div class="hero-badge">UK & EU Sourcing</div>
                   <div class="hero-badge">Export to Emerging Markets</div>
                 </div>
 
                 <div class="hero-cta">
-                  <a href="#contact">
-                    <button class="btn-outline">Become a Supplier</button>
-                  </a>
-
-                  <a href="#contact">
-                    <button class="btn-outline">Enquire about NOS Stock</button>
-                  </a>
+                  <a href="#contact"><button class="btn-outline">Become a Supplier</button></a>
+                  <a href="#contact"><button class="btn-outline">Enquire about NOS Stock</button></a>
                 </div>
 
-                <div class="hero-note">
-                  Direct contact with the supplier — no marketplace noise, no uncertainty.
-                </div>
+                <div class="hero-note">Direct contact with the supplier — no marketplace noise, no uncertainty.</div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- About / Overview -->
+      <!-- ABOUT -->
       <section id="about" class="section">
         <div class="container">
           <div class="section-inner">
             <h2 class="section-title">Who We Work With</h2>
             <p class="section-intro">
-              HDH Trading specialises in sourcing **new‑old‑stock (NOS)** automotive and hydraulic hoses from the UK and EU,
+              HDH Trading specialises in sourcing new‑old‑stock (NOS) automotive and hydraulic hoses from the UK and EU,
               supplying serious distributors and workshops who value reliability, traceability, and long‑term relationships.
             </p>
 
             <div class="grid-3">
               <div class="card">
-                <div class="card-title">Distributors &amp; Importers</div>
-                <p class="card-text">
-                  Ideal for businesses in **Emerging Markets** looking to import mixed NOS hose stock in bulk for resale.
-                </p>
+                <div class="card-title">Distributors & Importers</div>
+                <p class="card-text">Ideal for businesses in Emerging Markets looking to import mixed NOS hose stock in bulk for resale.</p>
                 <div class="pill-row">
                   <span class="pill">Bulk shipments</span>
                   <span class="pill">Mixed pallets</span>
@@ -487,10 +393,8 @@
               </div>
 
               <div class="card">
-                <div class="card-title">Workshops &amp; Fleets</div>
-                <p class="card-text">
-                  Support for workshops maintaining mixed fleets where cost‑effective, high‑quality NOS hoses are essential.
-                </p>
+                <div class="card-title">Workshops & Fleets</div>
+                <p class="card-text">Support for workshops maintaining mixed fleets where cost‑effective NOS hoses are essential.</p>
                 <div class="pill-row">
                   <span class="pill">Automotive</span>
                   <span class="pill">Agricultural</span>
@@ -500,9 +404,7 @@
 
               <div class="card">
                 <div class="card-title">Stock‑Focused Partners</div>
-                <p class="card-text">
-                  For partners who understand the value of NOS — quality components at strong commercial pricing.
-                </p>
+                <p class="card-text">For partners who understand the value of NOS — quality components at strong commercial pricing.</p>
                 <div class="pill-row">
                   <span class="pill">NOS focus</span>
                   <span class="pill">Value‑driven</span>
@@ -510,26 +412,24 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      <!-- Hose Types -->
+      <!-- PRODUCTS -->
       <section id="products" class="section">
         <div class="container">
           <div class="section-inner">
             <h2 class="section-title">Hose Types We Can Source</h2>
             <p class="section-intro">
-              We focus on **new‑old‑stock** from reputable UK and EU suppliers. Availability varies by batch, but typical
-              categories include:
+              We focus on new‑old‑stock from reputable UK and EU suppliers. Availability varies by batch, but typical categories include:
             </p>
 
             <div class="grid-3">
               <div class="card">
                 <div class="card-title">Automotive Hoses</div>
-                <p class="card-text">
-                  NOS hoses for passenger and light commercial vehicles, depending on batch availability.
-                </p>
+                <p class="card-text">NOS hoses for passenger and light commercial vehicles.</p>
                 <div class="pill-row">
                   <span class="pill">Coolant</span>
                   <span class="pill">Heater</span>
@@ -539,9 +439,7 @@
 
               <div class="card">
                 <div class="card-title">Hydraulic Hoses</div>
-                <p class="card-text">
-                  Industrial and mobile‑hydraulic NOS hoses suitable for machinery, plant, and equipment.
-                </p>
+                <p class="card-text">Industrial and mobile‑hydraulic NOS hoses for machinery and equipment.</p>
                 <div class="pill-row">
                   <span class="pill">High‑pressure</span>
                   <span class="pill">Braided</span>
@@ -550,10 +448,8 @@
               </div>
 
               <div class="card">
-                <div class="card-title">Specialist &amp; Miscellaneous</div>
-                <p class="card-text">
-                  Mixed NOS lots including specialist, legacy, or discontinued references — ideal for niche markets.
-                </p>
+                <div class="card-title">Specialist & Miscellaneous</div>
+                <p class="card-text">Mixed NOS lots including legacy or discontinued references.</p>
                 <div class="pill-row">
                   <span class="pill">Legacy parts</span>
                   <span class="pill">Mixed references</span>
@@ -562,53 +458,44 @@
               </div>
             </div>
 
-            <p class="muted-block">
-              Exact brands, specifications, and quantities depend on the NOS batches available at the time of enquiry.
-            </p>
           </div>
         </div>
       </section>
 
-      <!-- Export & Process -->
+      <!-- EXPORT -->
       <section id="export" class="section">
         <div class="container">
           <div class="section-inner">
             <h2 class="section-title">Export‑Focused, Relationship‑Driven</h2>
             <p class="section-intro">
-              Based in the UK, we focus on building **clear, repeatable export relationships** with partners in **Emerging Markets**
-              and beyond — with transparent communication around stock, pricing, and shipment planning.
+              Based in the UK, we build clear, repeatable export relationships with partners in Emerging Markets and beyond.
             </p>
 
             <div class="two-col">
               <div>
-                <h3 style="font-size:20px; font-weight:600; margin-bottom:10px;">How We Typically Work</h3>
+                <h3 style="font-size:20px; font-weight:600; margin-bottom:10px;">How We Work</h3>
                 <ul class="list">
-                  <li>Discuss your target volumes, hose types, and preferred mix.</li>
-                  <li>Identify suitable NOS batches from UK and EU suppliers.</li>
-                  <li>Share clear information on condition, mix, and approximate breakdown.</li>
+                  <li>Discuss your target volumes and preferred mix.</li>
+                  <li>Identify suitable NOS batches from UK/EU suppliers.</li>
+                  <li>Share clear information on condition and breakdown.</li>
                   <li>Agree commercial terms and shipment structure.</li>
-                  <li>Prepare stock for export and coordinate logistics with your freight partner.</li>
+                  <li>Prepare stock and coordinate export logistics.</li>
                 </ul>
-                <p class="muted-block">
-                  We focus on **clarity and predictability** — so you know what type of NOS stock you are receiving and
-                  how it fits your market.
-                </p>
               </div>
 
               <div>
                 <h3 style="font-size:20px; font-weight:600; margin-bottom:10px;">Why NOS Hoses</h3>
                 <ul class="list">
-                  <li>Access to quality components at stronger price points.</li>
-                  <li>Ideal for value‑driven markets where reliability still matters.</li>
-                  <li>Opportunity to build a differentiated stock profile versus standard imports.</li>
+                  <li>Quality components at stronger price points.</li>
+                  <li>Ideal for value‑driven markets.</li>
+                  <li>Differentiated stock profile vs standard imports.</li>
                 </ul>
-                <p class="muted-block">
-                  If you are a distributor or importer who understands the value of NOS, we are set up to work with you.
-                </p>
               </div>
             </div>
+
           </div>
         </div>
+      
       </section>
 
       <!-- Contact -->
